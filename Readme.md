@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Ilya Govorukha](https://up.htmlacademy.ru/adaptive/28/user/2259269).
-* Наставник: `Владимир Вавщик`.
+* Наставник: [Владимир Вавщик](https://htmlacademy.ru/profile/id1610171).
 
 ---
 
