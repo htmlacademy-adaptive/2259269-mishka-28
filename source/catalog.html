@@ -2,12 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css\style.css">
     <title>HTML Academy: Мишка</title>
   </head>
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__container">
-        <a class="page-header__logo">
+        <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек и аксессуаров «Мишка»">
         </a>
         <nav class="main-navigation">
@@ -17,18 +18,18 @@
           <div class="main-navigation__wrapper">
             <ul class="main-navigation__list site-list">
               <li class="site-list__item">
-                <a href="catalog.html">Каталог товаров</a>
+                <a class="site-list__link" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="site-list__item">
-                <a href="form.html">Вязание на заказ</a>
+                <a class="site-list__link" href="form.html">Вязание на заказ</a>
               </li>
             </ul>
             <ul class="main-navigation__list user-list">
               <li class="user-list__finder">
-                <a href="#">Поиск по сайту</a>
+                <a class="user-list__link" href="#">Поиск по сайту</a>
               </li>
               <li class="user-list__cart">
-                <a href="#">Корзина: пока пуста</a>
+                <a class="user-list__link" href="#">Корзина: пока пуста</a>
               </li>
             </ul>
           </div>
@@ -74,8 +75,8 @@
                 </h3>
                 <p class="product__description">Диаметр 15 см, высота 10 см</p>
                 <div class="product__item-price-info">
-                  <span class="product-price">690 руб.</span>
-                  <button class="product-button" type="button">
+                  <span class="product__price">690 руб.</span>
+                  <button class="product__button" type="button">
                     <span class="visually-hidden">
                       Положить в корзину
                     </span>
@@ -92,8 +93,8 @@
                 </h3>
                 <p class="product__description">Диаметр 30 см, высота 30 см</p>
                 <div class="product__item-price-info">
-                  <span class="product-price">1 500 руб.</span>
-                  <button class="product-button" type="button">
+                  <span class="product__price">1 500 руб.</span>
+                  <button class="product__button" type="button">
                     <span class="visually-hidden">
                       Положить в корзину
                     </span>
@@ -110,8 +111,7 @@
           <div class="video__header">
             <h2 class="video__title">Процесс производства</h2>
           </div>
-          <!-- Временная заглушка -->
-          <video></video>
+          <img class="video__image" src="img/video-mobile.jpg" width="260" height="150"><img>
           <div class="video__info">
             <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
             <button class="button video__button" type="button">Сделать заказ</button>
@@ -121,7 +121,7 @@
 
       <footer class="page-footer">
         <div class="page-footer__container">
-          <div class="main-footer-social social">
+          <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link" href="#">
@@ -141,7 +141,7 @@
             </ul>
           </div>
 
-          <div class="main-footer__copyright copyright">
+          <div class="page-footer__copyright copyright">
             <b class="copyright__text">Разработано</b>
             <a class="copyright__link"><span class="visually-hidden">HTML Academy</span></a>
           </div>
