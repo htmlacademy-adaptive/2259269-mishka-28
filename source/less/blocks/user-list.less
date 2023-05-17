@@ -1,7 +1,25 @@
 .user-list__link {
+  display: block;
   color: #000000;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .user-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 89px;
+  }
+
+  .user-list__link {
+    padding: 33px 0;
+  }
+
+  .user-list__cart {
+    padding: 0 50px;
+  }
 }
