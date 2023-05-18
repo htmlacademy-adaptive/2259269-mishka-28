@@ -9,3 +9,23 @@
     list-style-type: none;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .main-navigation__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation__wrapper {
+    align-items: center;
+    width: 1050px;
+    height: 89px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

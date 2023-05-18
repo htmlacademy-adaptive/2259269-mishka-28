@@ -1,4 +1,47 @@
 .page-header {
   background-color: #ffffff;
+}
+
+.page-header__container {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  outline-offset: -5px;
+  height: 79px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-header__logo {
+    margin: 0 50px;
+    width: 113px;
+    height: 89px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    position: absolute;
+    order: 2;
+    margin: 0 auto;
+  }
+
+  .page-header__container {
+    height: 89px;
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+  }
 }

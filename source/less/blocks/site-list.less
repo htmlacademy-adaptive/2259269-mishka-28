@@ -10,3 +10,39 @@
     text-decoration: none;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    width: 334px;
+    position: absolute;
+    display: flex;
+    row-gap: 20px;
+    left: 50px;
+    top: 110px;
+    flex-wrap: wrap;
+  }
+
+  .site-list__link {
+    display: block;
+    font-size: 15px;
+    width: 167px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 334px;
+    position: static;
+    display: flex;
+    row-gap: 20px;
+    left: 50px;
+    top: 110px;
+    flex-wrap: wrap;
+  }
+
+  .site-list__link {
+    display: block;
+    font-size: 17px;
+    width: 167px;
+  }
+}

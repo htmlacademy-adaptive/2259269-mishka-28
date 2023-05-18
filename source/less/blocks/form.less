@@ -1,5 +1,8 @@
 .form__container {
   margin: 0 auto;
+}
+
+.form__wrapper {
   padding: 0 30px;
 }
 
@@ -10,6 +13,7 @@
 }
 
 .form__legend {
+  padding-right: 22px;
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
@@ -19,7 +23,19 @@
 
 .form__list {
   list-style-type: none;
+  margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__filter {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #62d1ba;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__control {
@@ -33,4 +49,84 @@
   font-size: 14px;
   line-height: 16px;
   color: #444444;
+}
+
+.form__control-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__additional {
+  width: 100%;
+  resize: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form__description {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__list-color {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form__wrapper--odd {
+    background-color: #f1f1f1;
+  }
+
+  .form__wrapper {
+    padding: 0 50px;
+  }
+
+  .form__wrapper-other {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .form__control-name {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form__inscription {
+    order: 1;
+  }
+
+  .form__filter {
+    border: none;
+    flex-direction: row;
+  }
+
+  .form__legend {
+    align-self: self-start;
+    float: left;
+    width: 88px;
+    padding-right: 79px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__description {
+    width: 702px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__filter {
+    margin: 0 auto;
+    width: 1050px;
+  }
+
+  .form__list-color {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .form__wrapper-other {
+    padding-left: 225px;
+  }
 }

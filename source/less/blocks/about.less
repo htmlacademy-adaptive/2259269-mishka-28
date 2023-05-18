@@ -10,7 +10,14 @@
   line-height: 30px;
 }
 
+.about__list-item {
+  height: 105px;
+}
+
 .about__list-title {
+  display: block;
+  margin: 0;
+  max-width: 325px;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
@@ -20,4 +27,58 @@
 .about__list {
   padding: 0;
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .about__container {
+    padding: 0 50px;
+  }
+
+  .about__list {
+    height: 354px;
+  }
+
+  .about__title {
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about__list-item {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .about__list-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about__container {
+    padding: 0 0 0 175px;
+    width: 958px;
+    margin: 0 auto;
+  }
+
+  .about__list {
+    height: 354px;
+  }
+
+  .about__title {
+    font-weight: 700;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .about__list-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
