@@ -40,10 +40,13 @@
 }
 
 .contacts__map {
+  position: relative;
+  border: none;
   width: 100%;
 }
 
 .contacts__button {
+  display: flex;
   width: 260px;
   color: #000000;
   font-weight: 700;
@@ -54,11 +57,17 @@
   text-decoration: none;
   background-color: #ffffff;
   align-self: center;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: @tablet-width) {
   .contacts__title {
-    padding: 0 50px;
+    background-image: url("../../img/svg/flag.svg");
+    background-position-x: 94%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    padding: 49px 50px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -82,13 +91,25 @@
     font-size: 17px;
     line-height: 30px;
   }
+
+  .contacts__button {
+    width: 230px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .contacts__container {
+    background-image: url("../../img/svg/flag.svg");
+    background-position-x: 113px;
+    background-position-y: 133px;
+    background-repeat: no-repeat;
+    width: 1050px;
     display: grid;
-    justify-content: center;
-    grid-template-columns: 291px 527px;
+    padding: 90px 50px 105px 50px;
+    align-items: flex-end;
+    justify-content: right;
+    column-gap: 25px;
+    grid-template-columns: 335px 527px;
   }
 
   .contacts__map {
@@ -103,8 +124,19 @@
   }
 
   .contacts__title {
+    background-image: none;
     padding: 0;
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .contacts__description {
+    width: 247px;
+  }
+
+  .contacts__button {
+    width: 230px;
+    display: flex;
+    align-self: flex-end;
   }
 }

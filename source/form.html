@@ -12,25 +12,44 @@
         <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек и аксессуаров «Мишка»">
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation main-navigation--opened main-nav--nojs">
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-navigation__wrapper">
             <ul class="main-navigation__list site-list">
-              <li class="site-list__item">
-                <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+              <li class="main-navigation__item site-list__item">
+                <a class="main-navigation__link site-list__link" href="catalog.html">Каталог товаров</a>
               </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="form.html">Вязание на заказ</a>
+              <li class="main-navigation__item site-list__item">
+                <a class="main-navigation__link site-list__link" href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="main-navigation__list sub-list">
+              <div class="sub-list__wrapper">
+                <li class="main-navigation__item sub-list__item">
+                  <a href="#" class="sub-list__link">Новые поступления</a>
+                </li>
+                <li class="main-navigation__item sub-list__item">
+                  <a href="#" class="sub-list__link">Распродажа</a>
+                </li>
+              </div>
+              <li class="main-navigation__item sub-list__item">
+                <a href="#" class="sub-list__link sub-list__link-delivery">Бесплатная доставка по России</a>
               </li>
             </ul>
             <ul class="main-navigation__list user-list">
-              <li class="user-list__item user-list__finder">
-                <a class="user-list__link" href="#">Поиск по сайту</a>
+              <li class="main-navigation__item user-list__finder">
+                <a class="main-navigation__link user-list__link user-list__finder-link" href="#">
+                  <svg class="user-list__finder-icon" width="18" height="18" fill="none" viewBox="0 0 18 18"><path d="m17.693 16.057-3.477-3.477c1.023-1.33 1.534-2.966 1.534-4.705C15.75 3.477 12.273 0 7.875 0S0 3.477 0 7.875s3.477 7.875 7.875 7.875c1.739 0 3.375-.614 4.704-1.534l3.478 3.477c.204.205.409.307.818.307.614 0 1.125-.511 1.125-1.125 0-.204-.102-.511-.307-.818ZM2.25 7.875c0-3.068 2.557-5.625 5.625-5.625S13.5 4.807 13.5 7.875 10.943 13.5 7.875 13.5 2.25 10.943 2.25 7.875Z"/></svg>
+                  <span class="user-list__finder-inscription">Поиск по сайту</span>
+                </a>
               </li>
-              <li class="user-list__item user-list__cart">
-                <a class="user-list__link" href="#">Корзина: пока пуста</a>
+              <li class="main-navigation__item user-list__cart">
+                <a class="main-navigation__link user-list__link user-list__cart-link" href="#">
+                  <svg class="user-list__icon user-list__cart-icon" width="21" height="18" fill="none" viewBox="0 0 21 18"><path d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z"/></svg>
+                  Корзина: пока пуста
+                </a>
               </li>
             </ul>
           </div>
@@ -55,14 +74,30 @@
                 <ul class="form__list">
                   <li class="form__item">
                     <label class="form__control">
-                      <input class="form__input" type="radio" name="type" value="interior-accessory" checked>
-                      Аксессуар для интерьера
+                      <input class="form__input visually-hidden" type="radio" name="type" value="interior-accessory" checked>Аксессуар для интерьера
+                      <span class="form__control-marker">
+                        <svg class="form__control-marker--checked" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20.9098 2.51339C31.4935 2.51339 40.0418 10.9323 40.0418 21.2794C40.0418 31.6262 31.4935 40.0455 20.9098 40.0455C10.3261 40.0455 1.7778 31.6262 1.7778 21.2794C1.7778 10.9323 10.3261 2.51339 20.9098 2.51339Z" stroke="#444444" stroke-width="2"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1935 13.2408C25.5748 13.2408 29.1265 16.7922 29.1265 21.1735C29.1265 25.5548 25.5748 29.1065 21.1935 29.1065C16.8122 29.1065 13.2604 25.5548 13.2604 21.1735C13.2604 16.7922 16.8122 13.2408 21.1935 13.2408Z" fill="#62D1BA"/>
+                        </svg>
+                        <svg class="form__control-marker--unchecked" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20.9098 2.51339C31.4935 2.51339 40.0418 10.9323 40.0418 21.2794C40.0418 31.6262 31.4935 40.0455 20.9098 40.0455C10.3261 40.0455 1.7778 31.6262 1.7778 21.2794C1.7778 10.9323 10.3261 2.51339 20.9098 2.51339Z" stroke="#444444" stroke-width="2"/>
+                        </svg>
+                      </span>
                     </label>
                   </li>
                   <li class="form__item">
                     <label class="form__control">
-                      <input class="form__input" type="radio" name="type" value="toy">
-                      Детская игрушка
+                      <input class="form__input visually-hidden" type="radio" name="type" value="toy">Детская игрушка
+                      <span class="form__control-marker">
+                        <svg class="form__control-marker--checked" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20.9098 2.51339C31.4935 2.51339 40.0418 10.9323 40.0418 21.2794C40.0418 31.6262 31.4935 40.0455 20.9098 40.0455C10.3261 40.0455 1.7778 31.6262 1.7778 21.2794C1.7778 10.9323 10.3261 2.51339 20.9098 2.51339Z" stroke="#444444" stroke-width="2"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1935 13.2408C25.5748 13.2408 29.1265 16.7922 29.1265 21.1735C29.1265 25.5548 25.5748 29.1065 21.1935 29.1065C16.8122 29.1065 13.2604 25.5548 13.2604 21.1735C13.2604 16.7922 16.8122 13.2408 21.1935 13.2408Z" fill="#62D1BA"/>
+                        </svg>
+                        <svg class="form__control-marker--unchecked" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20.9098 2.51339C31.4935 2.51339 40.0418 10.9323 40.0418 21.2794C40.0418 31.6262 31.4935 40.0455 20.9098 40.0455C10.3261 40.0455 1.7778 31.6262 1.7778 21.2794C1.7778 10.9323 10.3261 2.51339 20.9098 2.51339Z" stroke="#444444" stroke-width="2"/>
+                        </svg>
+                      </span>
                     </label>
                   </li>
                 </ul>
@@ -75,32 +110,86 @@
                 <ul class="form__list form__list-color">
                   <li class="form__item">
                     <label class="form__control">
-                      <input type="checkbox" name="white" value="yes" checked> Белый
+                      <input class="form__input visually-hidden" type="checkbox" name="white" value="yes" checked> Белый
+                      <span class="form__control-marker">
+                        <svg class="form__control-marker--checked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                          <path d="M30.963 12.6839L29.9687 11.6923L15.7655 25.7862L8.73497 18.7747L7.74074 19.7662L14.7713 26.7777L15.7655 27.7692L16.8308 26.7777L30.963 12.6839Z" fill="black"/>
+                        </svg>
+                        <svg class="form__control-marker--unchecked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                        </svg>
+                      </span>
                     </label>
                   </li>
                   <li class="form__item">
                     <label class="form__control">
-                      <input type="checkbox" name="gray" value="yes" checked> Серый
+                      <input class="form__input visually-hidden" type="checkbox" name="gray" value="yes" checked> Серый
+                      <span class="form__control-marker">
+                        <svg class="form__control-marker--checked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                          <path d="M30.963 12.6839L29.9687 11.6923L15.7655 25.7862L8.73497 18.7747L7.74074 19.7662L14.7713 26.7777L15.7655 27.7692L16.8308 26.7777L30.963 12.6839Z" fill="black"/>
+                        </svg>
+                        <svg class="form__control-marker--unchecked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                        </svg>
+                      </span>
                     </label>
                   </li>
                   <li class="form__item">
                     <label class="form__control">
-                      <input type="checkbox" name="tiffany" value="yes"> Тиффани
+                      <input class="form__input visually-hidden" type="checkbox" name="tiffany" value="yes"> Тиффани
+                      <span class="form__control-marker">
+                        <svg class="form__control-marker--checked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                          <path d="M30.963 12.6839L29.9687 11.6923L15.7655 25.7862L8.73497 18.7747L7.74074 19.7662L14.7713 26.7777L15.7655 27.7692L16.8308 26.7777L30.963 12.6839Z" fill="black"/>
+                        </svg>
+                        <svg class="form__control-marker--unchecked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                        </svg>
+                      </span>
                     </label>
                   </li>
                   <li class="form__item">
                     <label class="form__control">
-                      <input type="checkbox" name="black" value="yes"> Черный
+                      <input class="form__input visually-hidden" type="checkbox" name="black" value="yes"> Черный
+                      <span class="form__control-marker">
+                        <svg class="form__control-marker--checked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                          <path d="M30.963 12.6839L29.9687 11.6923L15.7655 25.7862L8.73497 18.7747L7.74074 19.7662L14.7713 26.7777L15.7655 27.7692L16.8308 26.7777L30.963 12.6839Z" fill="black"/>
+                        </svg>
+                        <svg class="form__control-marker--unchecked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                        </svg>
+                      </span>
                     </label>
                   </li>
                   <li class="form__item">
                     <label class="form__control">
-                      <input type="checkbox" name="pink" value="yes"> Розовый
+                      <input class="form__input visually-hidden" type="checkbox" name="pink" value="yes"> Розовый
+                      <span class="form__control-marker">
+                        <svg class="form__control-marker--checked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                          <path d="M30.963 12.6839L29.9687 11.6923L15.7655 25.7862L8.73497 18.7747L7.74074 19.7662L14.7713 26.7777L15.7655 27.7692L16.8308 26.7777L30.963 12.6839Z" fill="black"/>
+                        </svg>
+                        <svg class="form__control-marker--unchecked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                        </svg>
+                      </span>
                     </label>
                   </li>
                   <li class="form__item">
                     <label class="form__control">
-                      <input type="checkbox" name="orange" value="yes"> Оранжевый
+                      <input class="form__input visually-hidden" type="checkbox" name="orange" value="yes"> Оранжевый
+                      <span class="form__control-marker">
+                        <svg class="form__control-marker--checked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                          <path d="M30.963 12.6839L29.9687 11.6923L15.7655 25.7862L8.73497 18.7747L7.74074 19.7662L14.7713 26.7777L15.7655 27.7692L16.8308 26.7777L30.963 12.6839Z" fill="black"/>
+                        </svg>
+                        <svg class="form__control-marker--unchecked" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="1" y="1" width="36" height="36" stroke="#444444" stroke-width="2"/>
+                        </svg>
+                      </span>
                     </label>
                   </li>
                 </ul>
@@ -112,21 +201,21 @@
                 <legend class="form__legend">ФИО</legend>
                 <ul class="form__list">
                   <li class="form__item">
-                    <label class="form__control form__control-name">
+                    <label class="form__control-name">
                       Имя:
-                      <input type="text" name="name" placeholder="Введите ваше имя*" required>
+                      <input class="form__placeholder" type="text" name="name" placeholder="Введите ваше имя*" required>
                     </label>
                   </li>
                   <li class="form__item">
-                    <label class="form__control form__control-name">
+                    <label class="form__control-name">
                       Фамилия:
-                      <input type="text" name="surname" placeholder="Укажите фамилию*" required>
+                      <input class="form__placeholder" type="text" name="surname" placeholder="Укажите фамилию*" required>
                     </label>
                   </li>
                   <li class="form__item">
-                    <label class="form__control form__control-name">
+                    <label class="form__control-name">
                       Отчество:
-                      <input type="text" name="patronymic" placeholder="Отчество, если желаете">
+                      <input class="form__placeholder" type="text" name="patronymic" placeholder="Отчество, если желаете">
                     </label>
                   </li>
                 </ul>
@@ -134,17 +223,17 @@
             </div>
 
             <div class="form__wrapper form__wrapper--odd">
-              <fieldset class="form__filter form__filter-type">
+              <fieldset class="form__filter form__filter-type form__filter--tel">
                 <legend class="form__legend">Тел</legend>
-                <label class="form__control">
-                  <input class="form__tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <label class="form__control-tel">
+                  <input class="form__placeholder form__tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                 </label>
               </fieldset>
 
-              <fieldset class="form__filter form__filter-type">
+              <fieldset class="form__filter form__filter-type form__filter--mail">
                 <legend class="form__legend">e-mail</legend>
-                <label class="form__control">
-                  <input class="form__mail" type="email" name="email" placeholder="Ваш Email*" required>
+                <label class="form__control-email">
+                  <input class="form__placeholder form__mail" type="email" name="email" placeholder="Ваш Email*" required>
                 </label>
               </fieldset>
             </div>
@@ -152,7 +241,7 @@
             <div class="form__wrapper form__wrapper--evenly">
               <fieldset class="form__filter form__filter-type">
                 <legend class="form__legend">Доп</legend>
-                <label class="form__control">
+                <label class="form__wishes">
                   <textarea class="form__additional" name="additional" placeholder="Опишите все ваши пожелания к заказу*" required></textarea>
                 </label>
               </fieldset>

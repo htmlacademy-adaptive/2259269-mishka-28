@@ -12,25 +12,44 @@
         <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек и аксессуаров «Мишка»">
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation main-navigation--opened main-nav--nojs">
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-navigation__wrapper">
             <ul class="main-navigation__list site-list">
-              <li class="site-list__item">
-                <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+              <li class="main-navigation__item site-list__item">
+                <a class="main-navigation__link site-list__link" href="catalog.html">Каталог товаров</a>
               </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="form.html">Вязание на заказ</a>
+              <li class="main-navigation__item site-list__item">
+                <a class="main-navigation__link site-list__link" href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="main-navigation__list sub-list">
+              <div class="sub-list__wrapper">
+                <li class="main-navigation__item sub-list__item">
+                  <a href="#" class="sub-list__link">Новые поступления</a>
+                </li>
+                <li class="main-navigation__item sub-list__item">
+                  <a href="#" class="sub-list__link">Распродажа</a>
+                </li>
+              </div>
+              <li class="main-navigation__item sub-list__item">
+                <a href="#" class="sub-list__link sub-list__link-delivery">Бесплатная доставка по России</a>
               </li>
             </ul>
             <ul class="main-navigation__list user-list">
-              <li class="user-list__finder">
-                <a class="user-list__link" href="#">Поиск по сайту</a>
+              <li class="main-navigation__item user-list__finder">
+                <a class="main-navigation__link user-list__link user-list__finder-link" href="#">
+                  <svg class="user-list__finder-icon" width="18" height="18" fill="none" viewBox="0 0 18 18"><path d="m17.693 16.057-3.477-3.477c1.023-1.33 1.534-2.966 1.534-4.705C15.75 3.477 12.273 0 7.875 0S0 3.477 0 7.875s3.477 7.875 7.875 7.875c1.739 0 3.375-.614 4.704-1.534l3.478 3.477c.204.205.409.307.818.307.614 0 1.125-.511 1.125-1.125 0-.204-.102-.511-.307-.818ZM2.25 7.875c0-3.068 2.557-5.625 5.625-5.625S13.5 4.807 13.5 7.875 10.943 13.5 7.875 13.5 2.25 10.943 2.25 7.875Z"/></svg>
+                  <span class="user-list__finder-inscription">Поиск по сайту</span>
+                </a>
               </li>
-              <li class="user-list__cart">
-                <a class="user-list__link" href="#">Корзина: пока пуста</a>
+              <li class="main-navigation__item user-list__cart">
+                <a class="main-navigation__link user-list__link user-list__cart-link" href="#">
+                  <svg class="user-list__icon user-list__cart-icon" width="21" height="18" fill="none" viewBox="0 0 21 18"><path d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762Zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095Zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666Z"/></svg>
+                  Корзина: пока пуста
+                </a>
               </li>
             </ul>
           </div>
@@ -44,8 +63,21 @@
         <div class="main-header__container">
           <h2 class="main-header__title"> Милые штуки ручной работы&nbsp;для дома</h2>
           <div class="main-header__wrapper">
-            <a class="main-header__link main-header__link--even" href="catalog.html">Предметы интерьера</a>
-            <a class="main-header__link main-header__link--odd" href="catalog.html">Детские игрушки</a>
+            <a class="main-header__link main-header__link--even" href="catalog.html">
+              <span class="main-header__link-title">Предметы интерьера</span>
+              <svg class="main-header__link-icon" width="41" height="62" fill="none" viewBox="0 0 41 62">
+                <g>
+                  <path d="M15.502 37.756c-.306.994-.204 2.186 0 3.577.51 2.584 1.734 5.962 2.448 9.638h5.202c.714-3.577 1.938-6.955 2.55-9.638.305-1.39.305-2.682 0-3.577-.307-.894-.919-1.59-2.04-2.285h-6.12c-1.224.696-1.836 1.391-2.04 2.285ZM27.537 57.628H13.463c-1.326 0-2.346.994-2.346 2.186V62H29.883v-2.186c0-1.192-1.02-2.186-2.346-2.186ZM34.779 2.286H22.846C22.846 1.094 21.826.1 20.5.1s-2.346.994-2.346 2.186H6.221L0 27.622c.816-.496 1.632-.993 2.652-.993 1.428 0 2.244.795 2.957 1.39.714.597 1.224.796 1.428.796.306 0 .816-.298 1.53-.795.714-.497 1.632-1.391 2.958-1.391 1.326 0 2.244.795 2.958 1.39.713.498 1.223.796 1.53.796.101 0 .305-.1.611-.199.204-.1.51-.397.918-.596.51-.398 1.122-.994 2.04-1.192.306-.1.612-.1.918-.1 1.326 0 2.244.795 2.958 1.391.714.497 1.224.795 1.53.795.306 0 .816-.298 1.427-.795.714-.596 1.632-1.39 2.958-1.39 1.428 0 2.244.794 2.958 1.39.306.298.612.497.918.596.204.1.408.2.612.2.306 0 .816-.299 1.428-.895.713-.596 1.631-1.391 2.957-1.391 1.02 0 1.836.497 2.652.993l-6.12-25.336ZM23.968 53.157H16.93c-.714 0-1.122.497-1.122 1.093s.51 1.093 1.122 1.093h7.038c.713 0 1.121-.497 1.121-1.093.102-.596-.407-1.093-1.121-1.093Z"/>
+                  <path d="M20.5 28.814c-.102 0-.306.1-.612.199-.204.1-.408.298-.612.397v3.677h2.346V29.51c-.51-.398-.918-.696-1.122-.696Z"/>
+                </g>
+              </svg>
+            </a>
+            <a class="main-header__link main-header__link--odd" href="catalog.html">
+              <span class="main-header__link-title">Детские игрушки</span>
+              <svg class="main-header__link-icon" width="60" height="61" fill="none" viewBox="0 0 60 61">
+                <path d="M0 44.727 27.4 61V37.153L0 20.777v23.95ZM51.3 12.69v2.559c0 1.842-3.5 3.378-7.7 3.378-4.3 0-7.7-1.536-7.7-3.378v-4.196c.3 1.74 3.6 3.172 7.7 3.172 4.3 0 7.7-1.535 7.7-3.377 0-1.842-3.5-3.378-7.7-3.378h-1l-5-2.968v3.173c0 1.842-3.5 3.378-7.7 3.378-2.7 0-5-.614-6.4-1.536-.2-.204-.4-.409-.7-.614-.4-.409-.6-.818-.6-1.228v-3.07L17.4 7.47h-1.1c-4.3 0-7.7 1.536-7.7 3.378s3.5 3.377 7.7 3.377c4.1 0 7.4-1.432 7.7-3.172v4.196c0 1.842-3.5 3.378-7.7 3.378-4.3 0-7.7-1.536-7.7-3.378v-2.456l-6 3.582 27.5 16.376 27.4-16.274-6.2-3.787Zm-13.6 10.44c0 1.842-3.5 3.377-7.7 3.377-4.3 0-7.7-1.535-7.7-3.377v-4.196c.3 1.74 3.6 3.172 7.7 3.172s7.4-1.433 7.7-3.172v4.196Zm-5.1 14.226V61L60 44.727V21.084L32.6 37.357ZM29.9 6.755c4.3 0 7.7-1.535 7.7-3.377C37.6 1.535 34.1 0 29.9 0c-4.3 0-7.7 1.535-7.7 3.378 0 1.842 3.4 3.377 7.7 3.377Z"/>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -118,10 +150,16 @@
             </cite>
             </blockquote>
             <div class="reviews__slider slider">
-              <button class="slider__button slider__button--prev button" type="button">
+              <button class="slider__button slider__button--prev" type="button">
+                <svg class="slider__icon" width="50" height="26" viewBox="0 0 50 26">
+                  <path d="M50 11H7.7l8.1-8.2L13 0 0 13l13 13 2.8-2.8L7.7 15H50v-4Z"/>
+                </svg>
                 <span class="visually-hidden">Предыдущий отзыв</span>
               </button>
-              <button class="slider__button slider__button--next button" type="button">
+              <button class="slider__button slider__button--next" type="button">
+                <svg class="slider__icon" width="50" height="26" viewBox="0 0 50 26">
+                  <path d="M50 11H7.7l8.1-8.2L13 0 0 13l13 13 2.8-2.8L7.7 15H50v-4Z"/>
+                </svg>
                 <span class="visually-hidden">Следующий отзыв</span>
               </button>
             </div>
@@ -147,7 +185,8 @@
               </dd>
             </div>
           </dl>
-          <img class="contacts__map" src="img/map-mobile@1x.jpg" width="320" height="454" alt="Карта">
+          <!-- <img class="contacts__map" src="img/map-mobile@1x.jpg" width="320" height="454" alt="Карта"> -->
+          <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?ll=30.318040%2C59.968471&mode=search&oid=24933578998&ol=biz&z=18.32" width="320" height="454" frameborder="1" allowfullscreen="true"></iframe>
           <a class="contacts__button button" href="#">Напишите нам</a>
         </div>
       </section>
@@ -182,7 +221,11 @@
 
           <div class="page-footer__copyright copyright">
             <b class="copyright__text">Разработано</b>
-            <a class="copyright__link"><span class="visually-hidden">HTML Academy</span></a>
+            <a class="copyright__link">
+              <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.7539 0.0444336H13.6543L0.208984 1.44443V26.1444L13.6543 34.1444L27 26.1444V1.44443L13.7539 0.0444336ZM25.1077 12.1444L13.6543 5.34443V5.24443H13.5547L13.4551 5.14443V5.24443L2.10129 12.1444V3.14443L13.5547 1.94443L25.1077 3.14443V12.1444ZM13.5547 6.84443L25.0081 13.5444L20.5263 16.1444L13.4551 11.9444V13.3444L19.3312 16.8444L18.4349 17.3444L13.4551 14.3444V15.7444L17.2397 18.0444L16.443 18.5444L13.4551 16.7444V18.1444L15.3474 19.2444L13.5547 20.3444L2.20088 13.6444L13.5547 6.84443ZM2.10129 15.1444L13.4551 21.9444V22.9444L5.58711 18.2444V19.6444L13.5547 24.4444V25.5444L5.58711 20.8444V22.2444L13.5547 27.0444L21.6219 22.1444V16.9444L25.0081 14.9444V24.9444L13.5547 31.8444L2.10129 25.0444V15.1444Z" fill="#63D1BB"/>
+                </svg>
+              <span class="visually-hidden">HTML Academy</span></a>
           </div>
         </div>
       </footer>

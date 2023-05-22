@@ -59,7 +59,7 @@
 
 .featured__product-image {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .featured__price {
@@ -85,14 +85,12 @@
 @media (min-width: @tablet-width) {
   .featured__container {
     display: grid;
-    padding: 40px 50px;
-    column-gap: 42px;
-    grid-template-columns: 292px 334px;
-    justify-content: center;
+    padding: 0 50px;
+    grid-template-columns: 1fr 1fr;
   }
 
   .featured__product-title {
-    width: 450px;
+    position: absolute;
     margin: 0;
     font-weight: 700;
     font-size: 43px;
@@ -100,38 +98,41 @@
   }
 
   .featured__title {
+    min-height: 50px;
+    grid-column-start: 2;
     line-height: 17px;
     margin-left: auto;
     width: 100px;
     text-align: center;
-    align-self: center;
   }
 
   .featured__product-description {
-    margin-top: 38px;
+    margin: 0 42px 0 0;
+    padding-top: 31px;
     font-size: 17px;
     line-height: 30px;
   }
 
   .featured__product-image {
+    padding-top: 44px;
     grid-column-start: 2;
     grid-row: 2 / 6;
-    margin-top: 50px;
-    height: 404px;
+    width: 100%;
   }
 
   .featured__list {
-    margin: 0;
+    margin: 0 42px 0 0;
     align-self: center;
   }
 
   .featured__price {
+    margin: 0 42px 0 0;
     grid-row-start: 4;
-    margin: 0;
     align-self: end;
   }
 
   .featured__button {
+    margin: 0 42px 0 0;
     grid-row-start: 5;
     align-self: end;
   }
@@ -139,22 +140,39 @@
 
 @media (min-width: @desktop-width) {
   .featured__container {
+    position: relative;
+    width: 1050px;
     padding: 0;
-    margin: 0 auto;
+    column-gap: 58px;
+    justify-content: right;
     display: grid;
-    grid-template-columns: 100px 292px 525px;
+    grid-template-columns: 95px 292px 525px;
+  }
+
+  .featured__list {
+    padding-top: 60px;
+    margin: 0;
   }
 
   .featured__title {
+    padding-top: 70px;
     grid-column-start: 1;
-    align-self: start;
     grid-row: 1 / 6;
+    margin: 0;
+  }
+
+  .featured__product-description {
+    padding-top: 154px;
+    margin: 0;
   }
 
   .featured__product-title {
+    top: 70px;
+    left: 172px;
     font-size: 53px;
     height: 57px;
     width: 545px;
+    margin: 0;
   }
 
   .featured__product-image {
@@ -163,8 +181,12 @@
     grid-row: 1 / 6;
     left: 575px;
     top: 905px;
-    width: 525px;
+    max-width: 525px;
     height: 636px;
     z-index: -1;
+  }
+
+  .featured__button {
+    margin-top: 33px;
   }
 }
