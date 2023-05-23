@@ -1,8 +1,8 @@
 .slider__button {
   background: #ffffff;
   box-sizing: border-box;
-  border: none;
-  width: 130px;
+  border: 1px solid #ececec;
+  width: 100%;
   height: 52px;
   margin: 0;
   padding: 0;
@@ -25,6 +25,8 @@
 }
 
 .slider__button--next {
+  border-left: 1px solid #ececec;
+
   .slider__icon {
     transform: rotate(180deg);
   }
@@ -33,5 +35,6 @@
 @media (min-width: @tablet-width) {
   .slider__button {
     width: 87px;
+    border: none;
   }
 }

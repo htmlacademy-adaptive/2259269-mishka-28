@@ -4,10 +4,29 @@
   list-style-type: none;
   height: 30px;
   display: flex;
-  column-gap: 35px;
+  column-gap: 29px;
+}
+
+.social__icon {
+  fill: #231f20;
+}
+
+.social__link {
+  &:hover {
+    .social__icon {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    .social__icon {
+      fill: fade(#46c1ae, 20%);
+    }
+  }
 }
 
 .social__item {
+  display: flex;
+  align-items: center;
   width: 30px;
-  outline: 1px solid #ff0000;
 }

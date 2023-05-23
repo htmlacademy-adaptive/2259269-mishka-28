@@ -4,3 +4,24 @@
   line-height: 18px;
   color: #000000;
 }
+
+.copyright__icon {
+  height: 34px;
+  fill: #63d1bb;
+}
+
+.copyright__link {
+  height: 34px;
+  &:hover {
+    .copyright__icon {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    .copyright__icon {
+      fill: fade(#46c1ae, 30%);
+    }
+  }
+}
+

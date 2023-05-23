@@ -1,6 +1,6 @@
 .about__container {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 31px 30px 29px 30px;
 }
 
 .about__title {
@@ -8,10 +8,43 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
+  margin: 0;
 }
 
 .about__list-item {
+  display: flex;
+  align-items: flex-end;
   height: 105px;
+  background-position: 8px 16px;
+  background-repeat: no-repeat;
+
+  &--flower {
+    background-image: url("../../img/svg/icon-1.svg.svg");
+  }
+
+  &--dollar {
+    background-image: url("../../img/svg/icon-3.svg.svg");
+    background-position: left 16px;
+  }
+
+  &--heart {
+    background-image: url("../../img/svg/icon-5.svg.svg");
+  }
+
+  &--tangle {
+    background-image: url("../../img/svg/icon-2.svg.svg");
+    background-position: 8px 16px;
+  }
+
+  &--rocket {
+    background-image: url("../../img/svg/icon-4.svg.svg");
+    background-position: left 16px;
+  }
+
+  &--gift {
+    background-image: url("../../img/svg/icon-6.svg.svg");
+    background-position: 8px 16px;
+  }
 }
 
 .about__list-title {
@@ -48,8 +81,23 @@
   }
 
   .about__list-item {
-    display: flex;
-    align-items: flex-end;
+    &--tangle {
+      background-image: url("../../img/svg/icon-2.svg.svg");
+      background-position: 16px 16px;
+      padding-left: 8px;
+    }
+
+    &--rocket {
+      background-image: url("../../img/svg/icon-4.svg.svg");
+      background-position: left 16px;
+      padding-left: 8px;
+    }
+
+    &--gift {
+      background-image: url("../../img/svg/icon-6.svg.svg");
+      background-position: 16px 16px;
+      padding-left: 8px;
+    }
   }
 
   .about__list-title {
