@@ -1,6 +1,21 @@
 .about__container {
+  position: relative;
   margin: 0 auto;
-  padding: 31px 30px 29px 30px;
+  padding: 38px 30px 11px 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 6px;
+    background-image: url("../../img/svg/zigzag-line-desktop.svg.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+    width: 100%;
+  }
 }
 
 .about__title {
@@ -14,17 +29,19 @@
 .about__list-item {
   display: flex;
   align-items: flex-end;
-  height: 105px;
+  height: 107px;
+  margin-bottom: 16px;
   background-position: 8px 16px;
   background-repeat: no-repeat;
 
   &--flower {
     background-image: url("../../img/svg/icon-1.svg.svg");
+    background-position: 8px 12px;
   }
 
   &--dollar {
     background-image: url("../../img/svg/icon-3.svg.svg");
-    background-position: left 16px;
+    background-position: left 12px;
   }
 
   &--heart {
@@ -33,7 +50,7 @@
 
   &--tangle {
     background-image: url("../../img/svg/icon-2.svg.svg");
-    background-position: 8px 16px;
+    background-position: 2px 15px;
   }
 
   &--rocket {
@@ -43,7 +60,7 @@
 
   &--gift {
     background-image: url("../../img/svg/icon-6.svg.svg");
-    background-position: 8px 16px;
+    background-position: 4px 14px;
   }
 }
 
@@ -68,35 +85,75 @@
 @media (min-width: @tablet-width) {
   .about__container {
     padding: 0 50px;
+    padding-top: 75px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 17px;
+      background-image: url("../../img/svg/zigzag-line-desktop.svg.svg");
+      background-repeat: repeat-x;
+      background-position: top;
+      background-size: contain;
+      width: 100%;
+    }
   }
 
   .about__list {
-    height: 354px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 47px;
+    margin-top: 34px;
   }
 
   .about__title {
     font-weight: 700;
     font-size: 43px;
     line-height: 50px;
+    margin: 0;
+    padding: 0;
   }
 
   .about__list-item {
+    margin: 0;
+
+    &--flower {
+      background-image: url("../../img/svg/icon-1.svg.svg");
+      background-position: 8px 6px;
+      order: 1;
+    }
+
+    &--dollar {
+      background-image: url("../../img/svg/icon-3.svg.svg");
+      background-position: 2px 10px;
+      order: 3;
+    }
+
+    &--heart {
+      background-image: url("../../img/svg/icon-5.svg.svg");
+      order: 5;
+    }
+
     &--tangle {
       background-image: url("../../img/svg/icon-2.svg.svg");
-      background-position: 16px 16px;
-      padding-left: 8px;
+      background-position: 2px 10px;
+      order: 2;
     }
 
     &--rocket {
       background-image: url("../../img/svg/icon-4.svg.svg");
-      background-position: left 16px;
-      padding-left: 8px;
+      background-position: left 12px;
+      order: 4;
     }
 
     &--gift {
       background-image: url("../../img/svg/icon-6.svg.svg");
-      background-position: 16px 16px;
-      padding-left: 8px;
+      background-position: 2px 10px;
+      order: 6;
     }
   }
 
@@ -109,13 +166,27 @@
 
 @media (min-width: @desktop-width) {
   .about__container {
-    padding: 0 0 0 0;
+    padding: 91px 0 0 7px;
     width: 708px;
     margin: 0 auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: -171px;
+      height: 23px;
+      background-image: url("../../img/svg/zigzag-line-desktop.svg.svg");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: 100%;
+      width: 1050px;
+    }
   }
 
   .about__list {
-    height: 354px;
+    column-gap: 26px;
   }
 
   .about__title {
