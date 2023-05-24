@@ -4,11 +4,15 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #f9f9f9;
-  background-image: url("../img/main-header-background.jpg");
+  background-image: url("../img/hero-mobile.jpg");
   background-position: 50% -18px;
   background-repeat: no-repeat;
   background-size: 568px 373px;
   height: 488px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 }
 
 .main-header__title {
@@ -77,10 +81,15 @@
 @media (min-width: @tablet-width) {
   .main-header__container {
     position: relative;
+    background-image: url("../img/hero-tablet.jpg");
     height: 744px;
     padding: 0 50px;
-    background-size: cover;
+    background-size: contain;
     background-position: 50% -3px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
 
     &::after {
       content: "";

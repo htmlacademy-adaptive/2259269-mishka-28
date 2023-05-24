@@ -119,10 +119,13 @@
   }
 
   .featured__product-image {
+    width: 100%;
+  }
+
+  .featured__product-container {
     padding-top: 44px;
     grid-column-start: 2;
     grid-row: 2 / 6;
-    width: 100%;
   }
 
   .featured__list {
@@ -192,6 +195,15 @@
     grid-row: 1 / 6;
     left: 575px;
     top: 905px;
+    max-width: 525px;
+    height: 636px;
+    z-index: -1;
+  }
+
+  .featured__product-container {
+    margin: 0;
+    grid-column-start: 3;
+    grid-row: 1 / 6;
     max-width: 525px;
     height: 636px;
     z-index: -1;
