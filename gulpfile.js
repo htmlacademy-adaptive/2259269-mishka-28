@@ -8,7 +8,11 @@ import svgSprite from 'gulp-svg-sprite';
 import rename from 'gulp-rename';
 import cleanCss from 'gulp-clean-css';
 import del from 'del';
+<<<<<<< HEAD
 // import squoosh from 'gulp-libsquoosh';
+=======
+import squoosh from 'gulp-libsquoosh';
+>>>>>>> 9aaee7c24ff3e3b4415dc1dcf0bab118c85b15fe
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 
@@ -56,7 +60,11 @@ const transferFonts = () => {
 };
 
 const creatingSprite = () => {
+<<<<<<< HEAD
   return gulp.src('source/img/svg/**/*.svg')
+=======
+  return gulp.src('source/img/icons-sprite/**/*.svg')
+>>>>>>> 9aaee7c24ff3e3b4415dc1dcf0bab118c85b15fe
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -70,11 +78,14 @@ const creatingSprite = () => {
     .pipe(gulp.dest('build/img/'))
 };
 
+<<<<<<< HEAD
 const transferSvg = () => {
   return gulp.src('source/img/svg/**/*.svg')
     .pipe(gulp.dest('build/img/'))
 }
 
+=======
+>>>>>>> 9aaee7c24ff3e3b4415dc1dcf0bab118c85b15fe
 const optimizeImagesJpg = () => {
   return gulp.src('source/img/*.{jpg,jpeg}')
     .pipe(squoosh({
@@ -144,9 +155,14 @@ export const build = gulp.series(
   transferFavicons,
   creatingSprite,
   styles,
+<<<<<<< HEAD
   // optimizeImagesJpg,
   // optimizeImagesPng,
   transferSvg
+=======
+  optimizeImagesJpg,
+  optimizeImagesPng
+>>>>>>> 9aaee7c24ff3e3b4415dc1dcf0bab118c85b15fe
   );
 
 export default gulp.series(
