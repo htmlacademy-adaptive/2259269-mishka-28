@@ -56,7 +56,7 @@ const transferFonts = () => {
 };
 
 const creatingSprite = () => {
-  return gulp.src('source/img/icons-sprite/**/*.svg')
+  return gulp.src('source/img/svg/**/*.svg')
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -69,6 +69,11 @@ const creatingSprite = () => {
     }))
     .pipe(gulp.dest('build/img/'))
 };
+
+const transferSvg = () => {
+  return gulp.src('source/img/svg/**/*.svg')
+    .pipe(gulp.dest('build/img/'))
+}
 
 const optimizeImagesJpg = () => {
   return gulp.src('source/img/*.{jpg,jpeg}')
@@ -140,7 +145,8 @@ export const build = gulp.series(
   creatingSprite,
   styles,
   optimizeImagesJpg,
-  optimizeImagesPng
+  optimizeImagesPng,
+  transferSvg
   );
 
 export default gulp.series(
