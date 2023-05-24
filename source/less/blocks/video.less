@@ -33,13 +33,13 @@
 
 .video__preview-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .video__preview-icon {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
   z-index: 2;
 
   &:hover {
@@ -181,9 +181,6 @@
   .video__preview-container {
     grid-row: 1 / 5;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .video__preview-icon {
