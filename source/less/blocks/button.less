@@ -1,3 +1,21 @@
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 52px;
+  box-sizing: border-box;
+  border: 2px solid #444444;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+
+  &:hover {
+    background: #444444;
+    color: #ffffff;
+  }
+
+  &:active {
+    color: fade(#ffffff, 30%);
+  }
 }

@@ -10,6 +10,8 @@
   color: #444444;
   font-size: 13px;
   line-height: 24px;
+  padding: 0 30px;
+  margin: 17px 0;
 }
 
 .form__legend {
@@ -21,16 +23,8 @@
   color: #63d1bb;
 }
 
-.form__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 .form__filter {
-  padding: 0;
+  padding: 30px 0;
   margin: 0;
   border: 0;
   border-top: 1px solid #62d1ba;
@@ -38,11 +32,14 @@
   flex-direction: column;
 }
 
-.form__control {
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 18px;
-  color: #000000;
+.form__filter--tel {
+  padding: 0;
+  padding-bottom: 35px;
+}
+
+.form__filter--mail {
+  padding: 0;
+  padding-bottom: 35px;
 }
 
 .form__inscription {
@@ -54,17 +51,155 @@
 .form__control-name {
   display: flex;
   flex-direction: column;
+  position: relative;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.form__placeholder {
+  border: none;
+  background: none;
+  width: 100%;
+  min-height: 52px;
+  box-shadow: inset 0 -2px 0 #000000;
+  padding: 0;
+  font-family: "OpenSans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 #62d1ba;
+  }
+
+  &:active {
+    color: #444444;
+  }
 }
 
 .form__additional {
   width: 100%;
+  padding: 17px;
+  height: 142px;
+  font-family: "OpenSans", sans-serif;
+  color: #000000;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
   resize: none;
+  box-sizing: border-box;
+  border: 2px solid #444444;
+}
+
+.form__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 11px;
+}
+
+
+.form__control-tel {
+  width: 100%;
+  background-image: url("../../img/svg/phone.svg.svg");
+  background-repeat: no-repeat;
+  background-position: 98%;
+}
+
+.form__control-email {
+  width: 100%;
+  background-image: url("../../img/svg/mail.svg.svg");
+  background-repeat: no-repeat;
+  background-position: 98%;
+}
+
+.form__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  padding-left: 61px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.form__control-marker {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 42px;
+  height: 42px;
+}
+
+.form__input[type="checkbox"]:checked + .form__control-marker .form__control-marker--checked,
+.form__input[type="checkbox"] + .form__control-marker .form__control-marker--unchecked {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.form__input[type="checkbox"]:checked + .form__control-marker .form__control-marker--unchecked,
+.form__input[type="checkbox"] + .form__control-marker .form__control-marker--checked {
+  display: none;
+}
+
+.form__input[type="radio"]:checked + .form__control-marker .form__control-marker--checked,
+.form__input[type="radio"] + .form__control-marker .form__control-marker--unchecked {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.form__input[type="radio"]:checked + .form__control-marker .form__control-marker--unchecked,
+.form__input[type="radio"] + .form__control-marker .form__control-marker--checked {
+  display: none;
+}
+
+// Временно. Пока что не работает
+// .form__control-marker--checked,
+// .form__control-marker--unchecked {
+//   fill: #444444;
+// }
+
+// .form__control:hover .form__control-marker--checked,
+// .form__control:hover .form__control-marker--unchecked {
+//   fill: #62d1ba;
+// }
+
+.form__button {
+  width: 100%;
+}
+
+.form__wrapper-other {
+  padding-bottom: 55px;
 }
 
 @media (min-width: @tablet-width) {
   .form__description {
     font-size: 17px;
     line-height: 30px;
+    padding: 0 50px;
+    margin-top: 52px;
+  }
+
+  .form__list {
+    width: 100%;
+    row-gap: 24px;
+  }
+
+  .form__control {
+    padding: 6px 0;
+    padding-left: 77px;
+    font-size: 19px;
+    line-height: 18px;
   }
 
   .form__list-color {
@@ -84,11 +219,14 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    padding-bottom: 50px;
   }
 
   .form__control-name {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    column-gap: 24px;
   }
 
   .form__inscription {
@@ -96,15 +234,42 @@
   }
 
   .form__filter {
+    padding: 50px 0;
     border: none;
     flex-direction: row;
   }
 
   .form__legend {
-    align-self: self-start;
+    align-self: flex-start;
+    padding-top: 15px;
     float: left;
     width: 88px;
     padding-right: 79px;
+  }
+
+  .form__filter--tel {
+    padding: 30px 0;
+  }
+
+  .form__control-tel {
+    width: 100%;
+  }
+
+  .form__control-email {
+    width: 100%;
+  }
+
+  .form__wishes {
+    width: 100%;
+  }
+
+  .form__button {
+    width: 230px;
+  }
+
+  .form__control-marker {
+    width: 52px;
+    height: 52px;
   }
 }
 
@@ -121,12 +286,35 @@
     width: 1050px;
   }
 
+  .form__list {
+    width: 828px;
+    row-gap: 24px;
+  }
+
+  .form__control {
+    padding-left: 80px;
+  }
+
+  .form__control-tel {
+    width: 828px;
+  }
+
+  .form__control-email {
+    width: 828px;
+  }
+
+  .form__wishes {
+    width: 828px;
+  }
+
   .form__list-color {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
   .form__wrapper-other {
-    padding-left: 225px;
+    width: 1050px;
+    margin: 0 auto;
+    padding-left: 39px;
   }
 }

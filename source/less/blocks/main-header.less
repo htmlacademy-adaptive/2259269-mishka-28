@@ -5,10 +5,10 @@
   justify-content: space-between;
   background-color: #f9f9f9;
   background-image: url("../img/main-header-background.jpg");
-  background-position: top;
+  background-position: 50% -18px;
   background-repeat: no-repeat;
-  background-size: 568px;
-  height: 506px;
+  background-size: 568px 373px;
+  height: 488px;
 }
 
 .main-header__title {
@@ -21,31 +21,78 @@
   line-height: 30px;
 }
 
+.main-header__link-icon {
+  width: 60px;
+  fill: fade(#149080, 50%);
+}
+
 .main-header__link {
-  display: block;
+  padding: 0 27px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: #ffffff;
   margin: 0;
   height: 103px;
-  width: 100%;
   text-decoration: none;
   font-weight: 700;
   font-size: 19px;
-  line-height: 19px;
-  text-align: left;
+  line-height: 24px;
+
+  &:hover {
+    .main-header__link-icon {
+      fill: fade(#149080, 70%);
+    }
+  }
+
+  &:active {
+    .main-header__link-icon {
+      fill: fade(#149080, 30%);
+    }
+  }
 
   &--odd {
     background-color: #56c3b2;
+
+    &:hover {
+      background-color: #59d5bc;
+    }
   }
 
   &--even {
     background-color: #63d1bb;
+
+    &:hover {
+      background-color: #46c1ae;
+    }
   }
+}
+
+.main-header__link-title {
+  margin-bottom: 5px;
+  max-width: 130px;
+  text-align: left;
 }
 
 @media (min-width: @tablet-width) {
   .main-header__container {
-    height: 758px;
+    position: relative;
+    height: 744px;
     padding: 0 50px;
+    background-size: cover;
+    background-position: 50% -3px;
+
+    &::after {
+      content: "";
+      background-image: url("../../img/svg/zigzag-fill-desktop.svg.svg");
+      background-position: bottom;
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      bottom: -12px;
+      left: 0;
+    }
   }
 
   .main-header__title {
@@ -56,14 +103,25 @@
   }
 
   .main-header__wrapper {
+    position: relative;
+    z-index: 1;
     height: 119px;
     display: flex;
     flex-direction: row;
   }
 
   .main-header__link {
+    z-index: -1;
+    width: 100%;
+    padding: 0 29px 0 36px;
     text-align: right;
     height: 100%;
+  }
+
+  .main-header__link-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -73,8 +131,29 @@
     width: 1050px;
   }
 
+  .main-header__title {
+    width: 700px;
+    margin: 0 auto;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
   .main-header__container {
-    height: 758px;
+    height: 744px;
     padding: 0;
+
+    &::after {
+      content: "";
+      background-image: url("../../img/svg/zigzag-fill-desktop.svg.svg");
+      background-position: bottom;
+      background-size: contain;
+      background-repeat: repeat-x;
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 34px;
+      bottom: -15px;
+      left: 0;
+    }
   }
 }
