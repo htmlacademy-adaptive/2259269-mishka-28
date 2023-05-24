@@ -36,7 +36,7 @@ const styles = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -144,5 +144,5 @@ export const build = gulp.series(
   );
 
 export default gulp.series(
-  styles, server, watcher
+  build, server, watcher
 );
