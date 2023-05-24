@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/152.png">
+    <link rel="icon" href="img/favicons/132.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css\style.css">
     <title>HTML Academy: Мишка</title>
   </head>
@@ -10,7 +14,11 @@
     <header class="page-header">
       <div class="page-header__container">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин игрушек и аксессуаров «Мишка»">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg"  alt="Магазин игрушек и аксессуаров «Мишка»">
+          </picture>
         </a>
         <nav class="main-navigation main-navigation--opened main-nav--nojs">
           <button class="main-navigation__toggle" type="button">
@@ -70,7 +78,11 @@
           <h2 class="visually-hidden">Список товаров</h2>
           <ul class="product__list">
             <li class="product__item">
-              <img class="product__image" src="/img/product-1-mobile.jpg" height="195" width="260" alt="Вязаный зайчик">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/product-1-desktop.jpg 1x, img/product-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/product-1-tablet.jpg 1x, img/product-1-tablet1@2x.jpg 2x">
+                <img class="product__image" src="/img/product-1-mobile.jpg" height="195" width="260" srcset="img/product-1-mobile@2x.jpg 2x" alt="Вязаный зайчик">
+              </picture>
               <div class="product__item-info">
                 <div class="product__info-container">
                   <h3 class="product__title">
@@ -93,7 +105,11 @@
             </li>
 
             <li class="product__item">
-              <img class="product__image" src="/img/product-2-mobile.jpg" height="195" width="260" alt="Корзинка со свернутными в рулон тремя полотенцами">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/product-2-desktop.jpg 1x, img/product-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/product-2-tablet.jpg 1x, img/product-2-tablet1@2x.jpg 2x">
+                <img class="product__image" src="/img/product-2-mobile.jpg" height="195" width="260" srcset="img/product-2-mobile@2x.jpg 2x" alt="Корзинка со свернутными в рулон тремя полотенцами">
+              </picture>
               <div class="product__item-info">
                 <div class="product__info-container">
                     <h3 class="product__title">
@@ -116,7 +132,11 @@
             </li>
 
             <li class="product__item">
-              <img class="product__image" src="/img/product-3-mobile.jpg" height="195" width="260" alt="Вязаная корзинка с кучей игрушек в виде животных">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/product-3-desktop.jpg 1x, img/product-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/product-3-tablet.jpg 1x, img/product-3-tablet@2x.jpg 2x">
+                <img class="product__image" src="/img/product-3-mobile.jpg" height="195" width="260" srcset="img/product-3-mobile@2x.jpg 2x" alt="Вязаная корзинка с кучей игрушек в виде животных">
+              </picture>
               <div class="product__item-info">
                 <div class="product__info-container">
                   <h3 class="product__title">
@@ -152,7 +172,11 @@
               <path d="M50.3996 77C49.3956 77 25.3002 76.6992 17.67 75.9974H17.5696H17.4692C17.168 75.8971 16.7664 75.8972 16.3648 75.7969C13.8549 75.4961 9.13618 74.8946 5.52187 70.7839C2.10835 67.1745 1.10437 59.9557 1.00398 59.1537C1.00398 58.8529 0 50.6315 0 42.4102V34.6901C0 26.3685 0.903588 18.2474 0.903588 17.9466V17.8463C1.00399 17.0443 2.10836 9.92577 5.42148 6.21613C9.43738 1.80467 13.9553 1.30339 16.164 1.10287C16.3648 1.10287 16.5656 1.10286 16.666 1.0026H16.7664C30.1193 0 50.1988 0 50.3996 0H50.5C50.7008 0 70.7803 0 84.1332 1.0026H84.2336C84.4344 1.0026 84.5348 1.00261 84.7356 1.10287C86.9443 1.30339 91.4622 1.80467 95.4781 6.21613C98.8917 9.8255 99.8956 17.0443 99.996 17.8463C99.996 18.1471 101 26.3685 101 34.6901V42.4102C101 50.7318 100.096 58.8529 99.996 59.1537V59.2539C99.8956 60.056 98.7913 67.2747 95.4781 70.8841C91.4622 75.2956 86.9443 75.7969 84.7356 75.9974C84.5348 75.9974 84.334 75.9974 84.2336 76.0977H84.1332C70.7803 77 50.6004 77 50.3996 77ZM18.3728 70.5833C25.9026 71.2852 49.6968 71.5859 50.5 71.5859C51.2028 71.5859 70.6799 71.5859 83.6312 70.5833C83.832 70.5833 84.0328 70.5833 84.2336 70.4831C86.0407 70.2826 88.8519 69.9818 91.4622 67.1745C93.2694 65.1693 94.3738 60.2565 94.5746 58.5521C94.675 58.0508 95.4781 50.1302 95.4781 42.4102V34.6901C95.4781 26.8698 94.5746 19.0495 94.4742 18.5482C94.173 16.1419 93.0686 11.7305 91.3618 10.026C88.7515 7.11849 85.9404 6.91795 84.1332 6.71743C83.9324 6.71743 83.7316 6.71746 83.5308 6.6172C70.3787 5.61459 50.6004 5.61459 50.3996 5.61459H50.2992C50.0984 5.61459 30.2197 5.61459 17.168 6.6172C16.9672 6.6172 16.7664 6.61717 16.5656 6.71743C14.7584 6.91795 11.9473 7.21875 9.337 10.026C7.52984 12.0313 6.42546 16.944 6.22466 18.6484C6.12427 19.25 5.32108 27.0703 5.32108 34.7904V42.5104C5.32108 50.2305 6.22466 58.1511 6.22466 58.6524C6.52586 61.0586 7.63024 65.4701 9.337 67.1745C11.6461 69.7813 14.6581 70.1823 16.8668 70.4831C17.4692 70.3828 17.8708 70.4831 18.3728 70.5833Z" fill="white"/>
               <path d="M38.4521 20.5532V56.3462L68.3706 38.4998L38.4521 20.5532Z" fill="white"/>
               </svg>
-          <img class="video__image" src="img/video-mobile.jpg" width="260" height="150"><img>
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet1.jpg 1x, img/video-tablet1@2x.jpg 2x">
+              <img class="video__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Превью видео с корзинкой"></img>
+            </picture>
           </div>
           <div class="video__info">
             <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>

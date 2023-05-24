@@ -33,21 +33,21 @@
 
 .video__preview-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .video__preview-icon {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
   z-index: 2;
 
   &:hover {
-    transform: scale(120%);
+    transform: translateY(-50%) translateX(-50%) scale(120%);
   }
 
   &:active {
-    transform: scale(80%);
+    transform: translateY(-50%) translateX(-50%) scale(80%);
   }
 }
 
@@ -79,8 +79,7 @@
 }
 
 .video__image {
-  min-width: 100%;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
   vertical-align: bottom;
   height: auto;
@@ -182,9 +181,6 @@
   .video__preview-container {
     grid-row: 1 / 5;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .video__preview-icon {
