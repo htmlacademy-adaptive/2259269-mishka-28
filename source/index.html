@@ -8,6 +8,8 @@
     <link rel="icon" href="img/favicons/132.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css\style.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
     <title>HTML Academy: Мишка</title>
   </head>
   <body class="page__body">
@@ -49,9 +51,9 @@
       <div class="page-header__container">
         <a class="page-header__logo" href="index.html">
           <picture>
-            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
-            <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" alt="Магазин игрушек и аксессуаров «Мишка»">
+            <source media="(min-width: 1150px)" srcset="img/svg/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/mishka-logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/svg/mishka-logo-mobile.svg" alt="Магазин игрушек и аксессуаров «Мишка»">
           </picture>
         </a>
         <nav class="main-navigation main-navigation--opened main-nav--nojs">
@@ -287,5 +289,27 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal">
+      <div class="modal__container modal__container--closed">
+        <div class="modal__content">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <span class="modal__inscription">Выберите размер:</span>
+          <ul class="modal__list">
+            <li class="modal__item">
+              <button class="modal__button" type="button">S</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__button" type="button">M</button>
+            </li>
+            <li class="modal__item">
+              <button class="modal__button" type="button">L</button>
+            </li>
+          </ul>
+          <button class="modal__button modal__button--submit" type="button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
