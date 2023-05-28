@@ -19,10 +19,12 @@
 @import "blocks/button.less";
 @import "blocks/sub-list.less";
 @import "blocks/modal.less";
+@import "blocks/main-container.less";
+@import "blocks/visually-hidden.less";
 
 @font-face {
   font-family: "OpenSans";
-  src: url("../fonts/opensans.woff2") format("woff2");
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -30,8 +32,8 @@
 
 @font-face {
   font-family: "OpenSans";
-  src: url("../fonts/opensansbold.woff2") format("woff2");
-  font-weight: 900;
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -40,28 +42,13 @@ html {
   height: 100%;
 }
 
-.main-container {
-  flex-grow: 1;
-}
-
 body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
   margin: 0;
   background-color: #ffffff;
-  font-family: "OpenSans", sans-serif;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  font-family: "OpenSans", "Tahoma", sans-serif;
 }
 
 // Variables

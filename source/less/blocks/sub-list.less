@@ -27,7 +27,7 @@
     right: 50px;
   }
 
-  .sub-list__wrapper {
+  .sub-list__item--tablet {
     display: none;
   }
 }
@@ -36,16 +36,19 @@
   .sub-list {
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     position: absolute;
     top: 109px;
     left: 50px;
     width: 1050px;
   }
 
-  .sub-list__wrapper {
+  .sub-list__item--tablet {
     display: flex;
-    flex-wrap: wrap;
-    column-gap: 61px;
+    margin-right: 61px;
+  }
+
+  .sub-list__item--delivery {
+    margin-left: auto;
   }
 }
