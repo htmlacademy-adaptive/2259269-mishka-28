@@ -104,6 +104,10 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .product__list {
+    row-gap: 54px;
+  }
+
   .product__image {
     width: 100%;
     height: auto;
@@ -118,6 +122,11 @@
   .product__description {
     font-size: 15px;
     line-height: 30px;
+  }
+
+  .product__price {
+    font-size: 17px;
+    line-height: 24px;
   }
 
   .product__item-info {
@@ -160,7 +169,7 @@
   }
 
   .product__item-info {
-    height: 197px;
+    min-height: 197px;
     display: flex;
     flex-direction: column;
     padding: 27px 33px 26px 27px;

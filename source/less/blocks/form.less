@@ -60,16 +60,18 @@
 
 .form__placeholder {
   border: none;
+  outline: none;
+  padding-left: 17px;
   background: none;
   width: 100%;
   min-height: 52px;
   box-shadow: inset 0 -2px 0 #000000;
-  padding: 0;
   font-family: "OpenSans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
+  color: fade(#000000, 30%);
 
   &:hover {
     box-shadow: inset 0 -2px 0 #62d1ba;
@@ -81,17 +83,25 @@
 }
 
 .form__additional {
+  border: 2px solid #444444;
+  outline: none;
   width: 100%;
   padding: 17px;
   height: 142px;
   font-family: "OpenSans", sans-serif;
-  color: #000000;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
   resize: none;
   box-sizing: border-box;
-  border: 2px solid #444444;
+
+  &:hover {
+    border: 2px solid #62d1ba;
+  }
+
+  &:active {
+    color: #444444;
+  }
 }
 
 .form__list {
@@ -108,14 +118,14 @@
   width: 100%;
   background-image: url("../img/phone.svg");
   background-repeat: no-repeat;
-  background-position: 98%;
+  background-position: 95%;
 }
 
 .form__control-email {
   width: 100%;
   background-image: url("../img/mail.svg");
   background-repeat: no-repeat;
-  background-position: 98%;
+  background-position: 95%;
 }
 
 .form__control {
@@ -163,7 +173,24 @@
   display: none;
 }
 
+.form__control .form__control-marker--checked,
+.form__control .form__control-marker--unchecked {
+  stroke: #444444;
+  stroke-width: 2px;
+}
+
+.form__control:hover .form__control-marker--checked,
+.form__control:hover .form__control-marker--unchecked {
+  stroke: #62d1ba;
+}
+
+.form__control:active .form__control-marker--checked,
+.form__control:active .form__control-marker--unchecked {
+  stroke: fade(#000000, 10%);
+}
+
 .form__button {
+  text-transform: uppercase;
   width: 100%;
 }
 
@@ -180,8 +207,9 @@
   }
 
   .form__list {
+    margin: -3px 0 4px 22px;
     width: 100%;
-    row-gap: 24px;
+    row-gap: 25px;
   }
 
   .form__control {
@@ -193,6 +221,9 @@
 
   .form__list-color {
     display: grid;
+    margin: 0;
+    margin-left: 24px;
+    column-gap: 24px;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -208,7 +239,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding-bottom: 50px;
+    padding-bottom: 46px;
   }
 
   .form__control-name {
@@ -216,9 +247,15 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 24px;
+    font-size: 19px;
+    line-height: 18px;
   }
 
   .form__inscription {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 17px;
+    line-height: 30px;
     order: 1;
   }
 
@@ -233,23 +270,41 @@
     padding-top: 15px;
     float: left;
     width: 88px;
-    padding-right: 79px;
+    padding-right: 74px;
   }
 
   .form__filter--tel {
-    padding: 30px 0;
+    padding: 0;
+    padding-top: 50px;
+  }
+
+  .form__filter--mail {
+    padding: 24px 0 50px 0;
   }
 
   .form__control-tel {
     width: 100%;
+    padding-left: 25px;
   }
 
   .form__control-email {
     width: 100%;
+    padding-left: 25px;
+  }
+
+  .form__tel {
+    padding: 0;
+    padding-left: 17px;
+  }
+
+  .form__mail {
+    padding: 0;
+    padding-left: 17px;
   }
 
   .form__wishes {
     width: 100%;
+    padding-left: 25px;
   }
 
   .form__button {
@@ -260,23 +315,44 @@
     width: 52px;
     height: 52px;
   }
+
+  .form__placeholder {
+    box-sizing: border-box;
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .form__additional {
+    font-size: 19px;
+    line-height: 18px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .form__description {
     width: 702px;
+    padding-top: 97px;
+    padding-bottom: 17px;
     margin: 0 auto;
     font-size: 17px;
     line-height: 30px;
   }
 
+  .form__legend {
+    padding-left: 61px;
+    padding-right: 0;
+  }
+
   .form__filter {
     margin: 0 auto;
     width: 1050px;
+    padding: 51px 0;
   }
 
   .form__list {
-    width: 828px;
+    margin: 0;
+    margin-left: 26px;
+    width: 762px;
     row-gap: 24px;
   }
 
@@ -284,16 +360,39 @@
     padding-left: 80px;
   }
 
-  .form__control-tel {
-    width: 828px;
+  .form__control-name {
+    width: 698px;
+  }
+
+  .form__filter--mail {
+    padding-top: 0;
+    padding-bottom: 50px;
   }
 
   .form__control-email {
-    width: 828px;
+    background-position: 100%;
+    width: 700px;
+  }
+
+  .form__filter--tel {
+    padding: 48px 0 24px 0;
+  }
+
+  .form__control-tel {
+    background-position: 99%;
+    width: 700px;
+  }
+
+  .form__tel {
+    width: 700px;
+  }
+
+  .form__mail {
+    width: 700px;
   }
 
   .form__wishes {
-    width: 828px;
+    width: 700px;
   }
 
   .form__list-color {
@@ -301,9 +400,19 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+
+  .form__additional {
+    margin-right: 50px;
+    width: 700px;
+  }
+
   .form__wrapper-other {
-    width: 1050px;
+    width: 704px;
+    padding-left: 52px;
     margin: 0 auto;
-    padding-left: 39px;
+  }
+
+  .form__filter--last {
+    padding-bottom: 44px;
   }
 }
