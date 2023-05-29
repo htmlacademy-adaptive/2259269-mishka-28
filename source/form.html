@@ -24,8 +24,9 @@
             <img class="page-header__logo-image" width="86" height="35" src="img/mishka-logo-mobile.svg" alt="Магазин игрушек и аксессуаров «Мишка»">
           </picture>
         </a>
-        <nav class="main-navigation main-navigation--opened main-navigation--nojs">
-          <button class="main-navigation__toggle" type="button">
+        <nav class="main-navigation main-navigation--nojs">
+          <!-- maim-navigation--opened maim-navigation--closed -->
+          <button class="main-navigation__toggle visually-hidden" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-navigation__wrapper">
@@ -81,7 +82,7 @@
         <div class="form__container">
           <h2 class="visually-hidden">Форма заказа</h2>
           <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-          <form class="form__order"  action="https://echo.htmlacademy.ru/" method="get">
+          <form class="form__order" action="https://echo.htmlacademy.ru/" method="get">
             <div class="form__wrapper form__wrapper--evenly">
               <fieldset class="form__filter form__filter-type">
                 <legend class="form__legend">Тип</legend>
@@ -90,10 +91,10 @@
                     <label class="form__control">
                       <input class="form__input visually-hidden" type="radio" name="type" value="interior-accessory" checked>Аксессуар для интерьера
                       <span class="form__control-marker">
-                        <svg class="form__control-marker--checked" width="42" height="42" fill="none">
+                        <svg class="form__control-icon form__control-icon--checked" width="42" height="42" fill="none">
                           <use xlink:href="img/sprite.svg#icon-radio-check"></use>
                         </svg>
-                        <svg class="form__control-marker--unchecked" width="42" height="42" fill="none">
+                        <svg class="form__control-icon form__control-icon--unchecked" width="42" height="42" fill="none">
                           <use xlink:href="img/sprite.svg#icon-radio-nocheck"></use>
                         </svg>
                       </span>
@@ -103,10 +104,10 @@
                     <label class="form__control">
                       <input class="form__input visually-hidden" type="radio" name="type" value="toy">Детская игрушка
                       <span class="form__control-marker">
-                        <svg class="form__control-marker--checked" width="42" height="42" fill="none">
+                        <svg class="form__control-icon form__control-icon--checked" width="42" height="42" fill="none">
                           <use xlink:href="img/sprite.svg#icon-radio-check"></use>
                         </svg>
-                        <svg class="form__control-marker--unchecked" width="42" height="42" fill="none">
+                        <svg class="form__control-icon form__control-icon--unchecked" width="42" height="42" fill="none">
                           <use xlink:href="img/sprite.svg#icon-radio-nocheck"></use>
                         </svg>
                       </span>
@@ -122,13 +123,13 @@
                 <ul class="form__list form__list-color">
                   <li class="form__item">
                     <label class="form__control">
-                      <input class="form__input visually-hidden" type="checkbox" name="white" value="yes" checked> Белый
+                      <input class="form__input visually-hidden" type="checkbox" name="white" value="yes" checked> Белый 
                       <span class="form__control-marker">
-                        <svg class="form__control-marker--checked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-check"></use>
+                        <svg class="form__control-icon form__control-icon--checked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
-                        <svg class="form__control-marker--unchecked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-nocheck"></use>
+                        <svg class="form__control-icon form__control-icon--unchecked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
                       </span>
                     </label>
@@ -137,11 +138,11 @@
                     <label class="form__control">
                       <input class="form__input visually-hidden" type="checkbox" name="gray" value="yes" checked> Серый
                       <span class="form__control-marker">
-                        <svg class="form__control-marker--checked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-check"></use>
+                        <svg class="form__control-icon form__control-icon--checked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
-                        <svg class="form__control-marker--unchecked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-nocheck"></use>
+                        <svg class="form__control-icon form__control-icon--unchecked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
                       </span>
                     </label>
@@ -150,11 +151,11 @@
                     <label class="form__control">
                       <input class="form__input visually-hidden" type="checkbox" name="tiffany" value="yes"> Тиффани
                       <span class="form__control-marker">
-                        <svg class="form__control-marker--checked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-check"></use>
+                        <svg class="form__control-icon form__control-icon--checked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
-                        <svg class="form__control-marker--unchecked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-nocheck"></use>
+                        <svg class="form__control-icon form__control-icon--unchecked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
                       </span>
                     </label>
@@ -163,11 +164,11 @@
                     <label class="form__control">
                       <input class="form__input visually-hidden" type="checkbox" name="black" value="yes"> Черный
                       <span class="form__control-marker">
-                        <svg class="form__control-marker--checked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-check"></use>
+                        <svg class="form__control-icon form__control-icon--checked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
-                        <svg class="form__control-marker--unchecked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-nocheck"></use>
+                        <svg class="form__control-icon form__control-icon--unchecked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
                       </span>
                     </label>
@@ -176,11 +177,11 @@
                     <label class="form__control">
                       <input class="form__input visually-hidden" type="checkbox" name="pink" value="yes"> Розовый
                       <span class="form__control-marker">
-                        <svg class="form__control-marker--checked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-check"></use>
+                        <svg class="form__control-icon form__control-icon--checked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
-                        <svg class="form__control-marker--unchecked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-nocheck"></use>
+                        <svg class="form__control-icon form__control-icon--unchecked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
                       </span>
                     </label>
@@ -189,11 +190,11 @@
                     <label class="form__control">
                       <input class="form__input visually-hidden" type="checkbox" name="orange" value="yes"> Оранжевый
                       <span class="form__control-marker">
-                        <svg class="form__control-marker--checked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-check"></use>
+                        <svg class="form__control-icon form__control-icon--checked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
-                        <svg class="form__control-marker--unchecked" width="38" height="38" fill="none">
-                          <use xlink:href="img/sprite.svg#icon-checkbox-nocheck"></use>
+                        <svg class="form__control-icon form__control-icon--unchecked" width="38" height="38" fill="none">
+                          <use xlink:href="img/sprite.svg#icon-checkbox"></use>
                         </svg>
                       </span>
                     </label>
