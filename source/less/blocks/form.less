@@ -149,43 +149,64 @@
   height: 42px;
 }
 
-.form__input[type="checkbox"]:checked + .form__control-marker .form__control-marker--checked,
-.form__input[type="checkbox"] + .form__control-marker .form__control-marker--unchecked {
+.form__input[type="checkbox"]:checked + .form__control-marker .form__control-icon--checked,
+.form__input[type="checkbox"] + .form__control-marker .form__control-icon--unchecked {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    background-size: 31px 31px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.form__control-icon--checked {
+  background-image: url("../img/icon-checkbox-checked.svg");
+  background-repeat: no-repeat;
+  background-size: 23px 23px;
+  background-position: center;
+}
+
+.form__control-icon--unchecked {
+  background: none;
+}
+
+.form__input[type="checkbox"]:checked + .form__control-marker .form__control-icon--unchecked,
+.form__input[type="checkbox"] + .form__control-marker .form__control-icon--checked {
+  display: none;
+}
+
+.form__input[type="radio"]:checked + .form__control-marker .form__control-icon--checked,
+.form__input[type="radio"] + .form__control-marker .form__control-icon--unchecked {
+  background: none;
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.form__input[type="checkbox"]:checked + .form__control-marker .form__control-marker--unchecked,
-.form__input[type="checkbox"] + .form__control-marker .form__control-marker--checked {
+.form__input[type="radio"]:checked + .form__control-marker .form__control-icon--unchecked,
+.form__input[type="radio"] + .form__control-marker .form__control-icon--checked {
   display: none;
 }
 
-.form__input[type="radio"]:checked + .form__control-marker .form__control-marker--checked,
-.form__input[type="radio"] + .form__control-marker .form__control-marker--unchecked {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.form__input[type="radio"]:checked + .form__control-marker .form__control-marker--unchecked,
-.form__input[type="radio"] + .form__control-marker .form__control-marker--checked {
-  display: none;
-}
-
-.form__control .form__control-marker--checked,
-.form__control .form__control-marker--unchecked {
+.form__control .form__control-icon--checked,
+.form__control .form__control-icon--unchecked {
   stroke: #444444;
   stroke-width: 2px;
 }
 
-.form__control:hover .form__control-marker--checked,
-.form__control:hover .form__control-marker--unchecked {
+.form__control:hover .form__control-icon--checked,
+.form__control:hover .form__control-icon--unchecked {
   stroke: #62d1ba;
 }
 
-.form__control:active .form__control-marker--checked,
-.form__control:active .form__control-marker--unchecked {
+.form__input:focus + .form__control-marker .form__control-icon--checked,
+.form__input:focus + .form__control-marker .form__control-icon--unchecked {
+  stroke: #62d1ba;
+}
+
+.form__control:active .form__control-icon--checked,
+.form__control:active .form__control-icon--unchecked {
   stroke: fade(#000000, 10%);
 }
 
